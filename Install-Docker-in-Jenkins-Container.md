@@ -31,6 +31,12 @@ Do get the Initial pwd using this Command.
 
 ``` cat var/jenkins_home/secrets/initialAdminPassword ```
 
+-------------------------------------------------------------------------------------------------------------------------------
+
+Either way to install Docker on Jenkins with root priveleges.
+
+```docker run -d --name jenkins -p 8080:8080 -p 50000:50000 \ -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker --user root jenkins/jenkins:lts```
+
 
 
 Run Jenkins on your IP : ``` http://<your_ip>:8080/ ```
